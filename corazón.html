@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazón Animado con Frases y Chica</title>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+            color: rgb(233, 78, 119); /* Color para las letras en RGB */
+            position: relative;
+        }
+
+        /* Corazón animado más grande y con gradiente */
+        .corazon {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, rgba(233, 78, 119, 1), rgba(255, 105, 180, 1));
+            transform: rotate(45deg);
+            animation: latir 1s infinite alternate;
+            margin-top: 100px; /* Ajusta el margen superior para moverlo más abajo */
+            margin-bottom: 50px;
+            border-radius: 10%;
+        }
+
+        .corazon:before, .corazon:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, rgba(233, 78, 119, 1), rgba(255, 105, 180, 1));
+            border-radius: 50%;
+        }
+
+        .corazon:before {
+            top: -100px;
+            left: 0;
+        }
+
+        .corazon:after {
+            left: 100px;
+            top: 0;
+        }
+
+        @keyframes latir {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Estilo de las frases con colores RGB */
+        .frases {
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 1.6;
+            animation: aparecer 2s ease-in-out infinite;
+            opacity: 0;
+            color: rgb(255, 69, 0); /* Color RGB para las frases */
+            margin-bottom: 10px;
+        }
+
+        @keyframes aparecer {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Anima las frases en secuencia */
+        .frases:nth-child(1) { animation-delay: 0s; }
+        .frases:nth-child(2) { animation-delay: 6s; }
+        .frases:nth-child(3) { animation-delay: 12s; }
+        .frases:nth-child(4) { animation-delay: 18s; }
+        .frases:nth-child(5) { animation-delay: 24s; }
+        .frases:nth-child(6) { animation-delay: 30s; }
+        .frases:nth-child(7) { animation-delay: 36s; }
+        .frases:nth-child(8) { animation-delay: 42s; }
+        .frases:nth-child(9) { animation-delay: 48s; }
+        .frases:nth-child(10) { animation-delay: 54s; }
+
+        /* Emojis dispersos */
+        .flores {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            pointer-events: none;
+            z-index: -1; /* Asegura que los emojis no interfieran con el contenido */
+        }
+
+        .flores span {
+            font-size: 2rem;
+            opacity: 0.6;
+            animation: moverFlores 10s infinite linear;
+        }
+
+        @keyframes moverFlores {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            100% {
+                transform: translateY(300px) translateX(300px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flores">
+        <span>🌹</span>
+        <span>🌷</span>
+        <span>🌺</span>
+        <span>🥀</span>
+        <span>🌹</span>
+        <span>🌷</span>
+        <span>🌺</span>
+        <span>🥀</span>
+        <span>🌹</span>
+        <span>🌷</span>
+    </div>
+
+    <div class="corazon"></div>
+
+    <div class="frases">El amor no se trata de encontrar a alguien con quien vivir, sino de encontrar a alguien con quien no puedas vivir sin él.</div>
+    <div class="frases">Cuando te vi, supe que mi corazón ya te pertenecía, incluso antes de conocerte.</div>
+    <div class="frases">El amor verdadero no se ve con los ojos, se siente con el corazón.</div>
+    <div class="frases">Eres mi hoy, mi mañana y todos mis días por venir.</div>
+    <div class="frases">Si pudiera ser cualquier cosa en el mundo, sería tu sonrisa, para estar siempre cerca de ti.</div>
+    <div class="frases">Amar no es solo un sentimiento, es un compromiso de hacer feliz al otro cada día.</div>
+    <div class="frases">Cada vez que te miro, me doy cuenta de que hay muchas maneras de ser feliz, y la mía es contigo.</div>
+    <div class="frases">Tú y yo somos como dos piezas de un rompecabezas que encajan perfectamente.</div>
+    <div class="frases">No necesito un cuento de hadas, solo necesito a alguien como tú.</div>
+    <div class="frases">Te amo no solo por lo que eres, sino por lo que soy cuando estoy contigo.</div>
+</body>
+</html>
